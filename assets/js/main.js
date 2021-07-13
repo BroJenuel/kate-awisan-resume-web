@@ -261,4 +261,9 @@
     })
   });
 
+  on('click','#send-message-button', function(e) {
+    e.preventDefault();
+    console.log('halo');
+  });
+
 })()
