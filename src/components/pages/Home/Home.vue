@@ -21,10 +21,39 @@
 <script>
 import Icon from './../../Icon/Icon.vue';
 import Typewriter from 'typewriter-effect/dist/core';
+import { onMounted } from '@vue/runtime-core';
 export default {
     name: 'HomePage',
     components: { Icon },
     setup() {
+        // mounted
+        onMounted(() => {
+            const first = 'Customer Service Associate';
+            const second = 'Social Media Assistant';
+            const third = 'Data Entry Freelancer';
+
+            let typewriter = new Typewriter('#typewriter', {
+                loop: true,
+                delay: 30,
+                deleteSpeed: 10,
+            });
+
+            typewriter
+                .pauseFor(500)
+                .typeString(first)
+                .pauseFor(2500)
+                .deleteChars(first.length)
+                .pauseFor(500)
+                .typeString(second)
+                .pauseFor(2500)
+                .deleteChars(second.length)
+                .pauseFor(500)
+                .typeString(third)
+                .pauseFor(2500)
+                .deleteChars(third.length)
+                .start();
+        });
+
         return {
             links: [
                 {
@@ -49,32 +78,6 @@ export default {
                 },
             ],
         };
-    },
-    mounted() {
-        var first = 'Customer Service Associate';
-        var second = 'Social Media Assistant';
-        var third = 'Data Entry Freelancer';
-
-        var typewriter = new Typewriter('#typewriter', {
-            loop: true,
-            delay: 30,
-            deleteSpeed: 10
-        });
-
-        typewriter
-            .pauseFor(500)
-            .typeString(first)
-            .pauseFor(2500)
-            .deleteChars(first.length)
-            .pauseFor(500)
-            .typeString(second)
-            .pauseFor(2500)
-            .deleteChars(second.length)
-            .pauseFor(500)
-            .typeString(third)
-            .pauseFor(2500)
-            .deleteChars(third.length)
-            .start();
     },
 };
 </script>
