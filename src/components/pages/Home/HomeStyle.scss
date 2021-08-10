@@ -1,7 +1,7 @@
 #hero {
     width: 100%;
     height: 100vh;
-    background: url('./../../../assets/images/background.jpg') top right no-repeat;
+    background: url('https://i.imgur.com/CbZx4a9.jpg') top right no-repeat;
     background-size: cover;
     position: relative;
 
@@ -21,8 +21,6 @@
     }
 
     .typewrite {
-        .wrap {
-            color: var(--primary-color);
-        }
+        color: var(--primary-color);
     }
 }
