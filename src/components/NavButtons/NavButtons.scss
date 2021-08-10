@@ -1,0 +1,16 @@
+.nav-button {
+    background-color: var(--light-color);
+    color: var(--light-dark) !important;
+    svg {
+        fill: var(--light-dark) !important;
+    }
+    transition: 0.2s ease-out;
+
+    &:hover {
+        background-color: var(--primary-color);
+        color: var(--light-color) !important;
+        svg {
+            fill: var(--light-color) !important;
+        }
+    }
+}
