@@ -22,7 +22,7 @@
                 "
                 v-for="(menu, i) in menus"
                 :key="menu.title"
-                @click="selectedNavButton = i"
+                @click="selectedNavButton = i; changePage(menu.id)"
                 :class="{ 'bg-blue-700': selectedNavButton === i }"
             >
                 <div class="w-[70px] p-[3px]">
@@ -47,7 +47,7 @@
                 class="flex flex-row align-middle gap-[10px] whitespace-nowrap rounded-[50px] cursor-pointer overflow-hidden p-[10px] h-[45px] hover:w-[100%] max-w-[140px] shadow-md text-center"
                 v-for="(menu, i) in menus"
                 :key="menu.title"
-                @click="selectedNavButton = i"
+                @click="selectedNavButton = i; changePage(menu.id)"
                 :class="{ 'bg-blue-700 text-light-50': selectedNavButton === i }"
             >
                 <div class="w-[70px] p-[3px]">
@@ -81,6 +81,7 @@ export default {
             {
                 icon: 'user',
                 title: 'About',
+                id: 'About-Page'
             },
             {
                 icon: 'file',
@@ -108,6 +109,9 @@ export default {
             menus,
             showMobile,
             selectedNavButton,
+            changePage: (id) => {
+                document.getElementById(id).scrollIntoView({behavior:"smooth"})
+            }
         };
     },
 };
