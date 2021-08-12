@@ -22,7 +22,10 @@
                 "
                 v-for="(menu, i) in menus"
                 :key="menu.title"
-                @click="selectedNavButton = i; changePage(menu.id)"
+                @click="
+                    selectedNavButton = i;
+                    changePage(menu.id);
+                "
                 :class="{ 'bg-blue-700': selectedNavButton === i }"
             >
                 <div class="w-[70px] p-[3px]">
@@ -47,7 +50,10 @@
                 class="flex flex-row align-middle gap-[10px] whitespace-nowrap rounded-[50px] cursor-pointer overflow-hidden p-[10px] h-[45px] hover:w-[100%] max-w-[140px] shadow-md text-center"
                 v-for="(menu, i) in menus"
                 :key="menu.title"
-                @click="selectedNavButton = i; changePage(menu.id)"
+                @click="
+                    selectedNavButton = i;
+                    changePage(menu.id);
+                "
                 :class="{ 'bg-blue-700 text-light-50': selectedNavButton === i }"
             >
                 <div class="w-[70px] p-[3px]">
@@ -77,30 +83,59 @@ export default {
             {
                 icon: 'home',
                 title: 'Home',
+                id: 'hero',
             },
             {
                 icon: 'user',
                 title: 'About',
-                id: 'About-Page'
+                id: 'About-Page',
             },
             {
                 icon: 'file',
                 title: 'Experience',
+                id: 'experience-content',
             },
             {
                 icon: 'book',
                 title: 'Portfolio',
+                id: 'portfolio-page-content',
             },
             {
                 icon: 'envelope',
                 title: 'Contact Me',
+                id: 'contact-page-content',
             },
         ];
 
+        const isScrolledIntoView = (elemID) => {
+            return elemID.offsetTop <= ( window.scrollY + (window.innerHeight - (window.innerHeight * 0.50)) );
+        };
+
+        const setNavButtonOnScroll = (elementID) => {
+            let menuKey = menus.findIndex((x) => x.id === elementID);
+            selectedNavButton.value = menuKey;
+        };
+
         onMounted(() => {
             window.addEventListener('resize', () => {
-                if(window.innerWidth > 683 && showMobile.value === true) {
-                    showMobile.value = false
+                if (window.innerWidth > 683 && showMobile.value === true) {
+                    showMobile.value = false;
+                }
+            });
+
+            window.addEventListener('scroll', () => {
+                if (isScrolledIntoView(document.getElementById('contact-page-content'))) {
+                    setNavButtonOnScroll('contact-page-content');
+                } else
+                if (isScrolledIntoView(document.getElementById('portfolio-page-content'))) {
+                    setNavButtonOnScroll('portfolio-page-content');
+                } else if (isScrolledIntoView(document.getElementById('experience-content'))) {
+                    setNavButtonOnScroll('experience-content');
+                } else
+                if (isScrolledIntoView(document.getElementById('About-Page'))) {
+                    setNavButtonOnScroll('About-Page');
+                } else if (isScrolledIntoView(document.getElementById('hero'))) {
+                    setNavButtonOnScroll('hero');
                 }
             });
         });
@@ -110,8 +145,8 @@ export default {
             showMobile,
             selectedNavButton,
             changePage: (id) => {
-                document.getElementById(id).scrollIntoView({behavior:"smooth"})
-            }
+                document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+            },
         };
     },
 };
