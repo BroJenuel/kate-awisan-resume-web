@@ -11,33 +11,18 @@
                 {{ category.name }}
             </li>
         </ul>
-        <div class="gallery flex justify-center">
-            <div class="max-w-1200px md:px-100px px-20px flex flex-wrap gap-20px justify-center">
-                <div class="portfolio-gallery-item w-250px overflow-hidden">
-                    <img class="w-300px" src="https://kateawisan.ml/assets/img/portfolio/others1.png" alt="">
-                </div>
-                <div class="portfolio-gallery-item w-250px overflow-hidden">
-                    <img class="w-300px" src="https://kateawisan.ml/assets/img/portfolio/others1.png" alt="">
-                </div>
-                <div class="portfolio-gallery-item w-250px overflow-hidden">
-                    <img class="w-300px" src="https://kateawisan.ml/assets/img/portfolio/others1.png" alt="">
-                </div>
-                <div class="portfolio-gallery-item w-250px overflow-hidden">
-                    <img class="w-300px" src="https://kateawisan.ml/assets/img/portfolio/others1.png" alt="">
-                </div>
-                <div class="portfolio-gallery-item w-250px overflow-hidden">
-                    <img class="w-300px" src="https://kateawisan.ml/assets/img/portfolio/others1.png" alt="">
-                </div>
-                <div class="portfolio-gallery-item w-250px overflow-hidden">
-                    <img class="w-300px" src="https://kateawisan.ml/assets/img/portfolio/others1.png" alt="">
-                </div>
-                <div class="portfolio-gallery-item w-250px overflow-hidden">
-                    <img class="w-300px" src="https://kateawisan.ml/assets/img/portfolio/others1.png" alt="">
-                </div>
-                <div class="portfolio-gallery-item w-250px overflow-hidden">
-                    <img class="w-300px" src="https://kateawisan.ml/assets/img/portfolio/others1.png" alt="">
-                </div>
-            </div>
+        <div class="portfolio-gallery-item gallery flex justify-center">
+            <ul>
+                <li v-for="(image, i) in images" :key="i">
+                    <img
+                        :src="require(`@/assets/images/portfolio/${image.image}`)"
+                        alt="A Toyota Previa covered in graffiti"
+                        loading="lazy"
+                    />
+                </li>
+                <!--  Adding an empty <li> here so the final photo doesn't stretch like crazy. Try removing it and see what happens!  -->
+                <li></li>
+            </ul>
         </div>
     </div>
 </template>
@@ -69,9 +54,70 @@ export default {
                 key: 'others',
             },
         ];
+        const images = [
+            {
+                type: 'ads',
+                image: 'ads1.png'
+            },
+            {
+                type: 'ads',
+                image: 'ads2.png'
+            },
+            {
+                type: 'ads',
+                image: 'ads3.png'
+            },
+            {
+                type: 'art',
+                image: 'art1.png'
+            },
+            {
+                type: 'art',
+                image: 'art2.png'
+            },
+            {
+                type: 'art',
+                image: 'art3.jpg'
+            },
+            {
+                type: 'logo',
+                image: 'logo.png'
+            },
+            {
+                type: 'logo',
+                image: 'logo2.png'
+            },
+            {
+                type: 'logo',
+                image: 'logo3.png'
+            },
+            {
+                type: 'others',
+                image: 'others1.png'
+            },
+            {
+                type: 'others',
+                image: 'others2.png'
+            },
+            {
+                type: 'others',
+                image: 'others3.png'
+            },
+            // {
+            //     type: 'others',
+            //     image: 'others4.jfif'
+            // },
+            {
+                type: 'others',
+                image: 'others5.png'
+            },
+        ];
         return {
             categories,
+            images
         };
     },
 };
 </script>
+<style lang="scss" src="./style.scss">
+</style>
