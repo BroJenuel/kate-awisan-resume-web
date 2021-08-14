@@ -1,5 +1,5 @@
 <template>
-    <div id="portfolio-page-content">
+    <div id="portfolio-page-content" class="min-h-100vh pt-40px">
         <content-title title="PORTFOLIO" />
         <div class="flex justify-center">
             <div class="max-w-1000px md:px-100px px-20px">
@@ -12,7 +12,28 @@
             </li>
         </ul>
         <div class="gallery flex justify-center">
-            <div class="max-w-1200px md:px-100px px-20px">
+            <div class="max-w-1200px md:px-100px px-20px flex flex-wrap gap-20px justify-center">
+                <div class="portfolio-gallery-item w-250px overflow-hidden">
+                    <img class="w-300px" src="https://kateawisan.ml/assets/img/portfolio/others1.png" alt="">
+                </div>
+                <div class="portfolio-gallery-item w-250px overflow-hidden">
+                    <img class="w-300px" src="https://kateawisan.ml/assets/img/portfolio/others1.png" alt="">
+                </div>
+                <div class="portfolio-gallery-item w-250px overflow-hidden">
+                    <img class="w-300px" src="https://kateawisan.ml/assets/img/portfolio/others1.png" alt="">
+                </div>
+                <div class="portfolio-gallery-item w-250px overflow-hidden">
+                    <img class="w-300px" src="https://kateawisan.ml/assets/img/portfolio/others1.png" alt="">
+                </div>
+                <div class="portfolio-gallery-item w-250px overflow-hidden">
+                    <img class="w-300px" src="https://kateawisan.ml/assets/img/portfolio/others1.png" alt="">
+                </div>
+                <div class="portfolio-gallery-item w-250px overflow-hidden">
+                    <img class="w-300px" src="https://kateawisan.ml/assets/img/portfolio/others1.png" alt="">
+                </div>
+                <div class="portfolio-gallery-item w-250px overflow-hidden">
+                    <img class="w-300px" src="https://kateawisan.ml/assets/img/portfolio/others1.png" alt="">
+                </div>
                 <div class="portfolio-gallery-item w-250px overflow-hidden">
                     <img class="w-300px" src="https://kateawisan.ml/assets/img/portfolio/others1.png" alt="">
                 </div>

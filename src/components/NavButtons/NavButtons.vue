@@ -23,7 +23,6 @@
                 v-for="(menu, i) in menus"
                 :key="menu.title"
                 @click="
-                    selectedNavButton = i;
                     changePage(menu.id);
                 "
                 :class="{ 'bg-blue-700': selectedNavButton === i }"
@@ -51,7 +50,6 @@
                 v-for="(menu, i) in menus"
                 :key="menu.title"
                 @click="
-                    selectedNavButton = i;
                     changePage(menu.id);
                 "
                 :class="{ 'bg-blue-700 text-light-50': selectedNavButton === i }"

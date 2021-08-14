@@ -1,5 +1,5 @@
 <template>
-    <div id="experience-content" class="experience-content py-50px">
+    <div id="experience-content" class="experience-content py-50px min-h-100vh">
         <content-title :title="`EXPERIENCE`" />
         <div class="flex flex-row justify-center pt-30px">
             <div class="flex max-w-1200px gap-50px px-80px <md:px-40px <md:flex-col <md:gap-0">
