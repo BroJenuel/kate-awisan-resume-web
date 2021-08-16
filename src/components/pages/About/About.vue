@@ -1,15 +1,15 @@
 <template>
-    <section id="About-Page" class="about-page-section min-h-[100vh] pt-50px flex flex-col justify-center">
+    <section id="About-Page" class="about-page-section min-h-[100vh] pt-50px flex flex-col">
         <ContentTitle title="ABOUT" />
         <div class="flex justify-center items-center">
-            <div class="max-w-1000px px-20px md:px-80px text-center">
+            <div class="max-w-1200px px-20px md:px-80px text-center">
                 <p>{{ details }}</p>
             </div>
         </div>
         <div class="flex justify-center items-center">
             <div class="max-w-1000px px-20px flex flex-col md:flex-row items-center gap-30px py-50px md:px-80px">
-                <div class="w-200px">
-                    <img width="200" class="w-100% max-w-200px" src="./../../../assets/images/profile-img.jpg" alt="" />
+                <div class="w-250px">
+                    <img width="250" class="w-100% max-w-250px" src="./../../../assets/images/profile-img.jpg" alt="" />
                 </div>
                 <div class="md:max-w-600px">
                     <div class="flex flex-wrap gap-10px <md:justify-center">
@@ -43,7 +43,7 @@
                         </ul>
                     </div>
 
-                    <div class="py-10px">
+                    <div class="py-50px">
                         <p>
                             I have completed my Bachelors degree in Information and Technology at King’s College of the Philippines. I’m from the mountainous region of Cordillera, Luzon-part of the
                             Philippines called the province of Benguet.

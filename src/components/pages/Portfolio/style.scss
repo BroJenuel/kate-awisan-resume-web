@@ -2,58 +2,143 @@
     ul {
         display: flex;
         flex-wrap: wrap;
+
+        img {
+            max-height: 100%;
+            min-width: 100%;
+            object-fit: cover;
+            vertical-align: bottom;
+        }
     }
 
     li {
         height: 40vh;
         flex-grow: 1;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            background: rgba(255, 255, 255, 0.9);
+            position: absolute;
+            left: 30px;
+            right: 30px;
+            top: 30px;
+            bottom: 30px;
+            transition: all ease-in-out 0.3s;
+            z-index: 2;
+            opacity: 0;
+        }
+
+        &:hover {
+            &::before {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 1;
+            }
+
+            .portfolio-info {
+                opacity: 1;
+                &::before {
+                    top: 15px;
+                    left: 15px;
+                }
+
+                &::after {
+                    bottom: 15px;
+                    right: 15px;
+                }
+            }
+        }
+
+        .portfolio-info {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            z-index: 3;
+            transition: all ease-in-out 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &::before {
+                display: block;
+                content: "";
+                width: 48px;
+                height: 48px;
+                position: absolute;
+                top: 35px;
+                left: 35px;
+                border-top: 3px solid var(--light-dark);
+                border-left: 3px solid var(--light-dark);
+                transition: all 0.5s ease 0s;
+                z-index: 9994;
+            }
+
+            &::after {
+                display: block;
+                content: "";
+                width: 48px;
+                height: 48px;
+                position: absolute;
+                bottom: 35px;
+                right: 35px;
+                border-bottom: 3px solid var(--light-dark);
+                border-right: 3px solid var(--light-dark);
+                transition: all 0.5s ease 0s;
+                z-index: 9994;
+            }
+        }
     }
 
     li:last-child {
         // There's no science in using "10" here. In all my testing, this delivered the best results.
         flex-grow: 10;
     }
-
-    img {
-        max-height: 100%;
-        min-width: 100%;
-        object-fit: cover;
-        vertical-align: bottom;
-    }
-
-    // ADVANCED
-
-    // Portrait
 }
 
 @media (max-aspect-ratio: 1/1) {
-    li {
-        height: 30vh;
+    .portfolio-gallery-item {
+        li {
+            height: 30vh;
+        }
     }
 }
 
 // Short screens
 
 @media (max-height: 480px) {
-    li {
-        height: 80vh;
+    .portfolio-gallery-item {
+        li {
+            height: 80vh;
+        }
     }
 }
 
 // Smaller screens in portrait
 
 @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
-    ul {
-        flex-direction: row;
-    }
+    .portfolio-gallery-item {
+        ul {
+            flex-direction: row;
 
-    li {
-        height: auto;
-        width: 100%;
-    }
-    img {
-        width: 100%;
-        max-height: 75vh;
-        min-width: 0;
+            img {
+                width: 100%;
+                max-height: 75vh;
+                min-width: 0;
+            }
+        }
+
+        li {
+            height: auto;
+            width: 100%;
+        }
     }
 }

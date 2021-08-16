@@ -22,6 +22,7 @@
 import Icon from './../../Icon/Icon.vue';
 import Typewriter from 'typewriter-effect/dist/core';
 import { onMounted } from '@vue/runtime-core';
+import { links } from '../../../Details/details';
 export default {
     name: 'HomePage',
     components: { Icon },
@@ -55,28 +56,7 @@ export default {
         });
 
         return {
-            links: [
-                {
-                    link: `https://twitter.com/AwisanKate`,
-                    icon: `twitter`,
-                },
-                {
-                    link: `https://www.facebook.com/kitztakit.calixtoawisan`,
-                    icon: `facebook`,
-                },
-                {
-                    link: `https://www.instagram.com/kateawisan`,
-                    icon: `instagram`,
-                },
-                {
-                    link: `https://www.skype.com/kateawisan`,
-                    icon: `skype`,
-                },
-                {
-                    link: `https://www.linkedin.com/in/kateawisan`,
-                    icon: `linkedin`,
-                },
-            ],
+            links: links,
         };
     },
 };
