@@ -111,7 +111,7 @@ export default {
             },
             {
                 type: 'logo',
-                imageThumbnail: 'https://i.imgur.com/p8zeuE6l.png',
+                imageThumbnail: 'https://i.imgur.com/p8zeuE6.png',
                 image: 'https://i.imgur.com/p8zeuE6.png',
             },
             {
