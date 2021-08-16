@@ -1,3 +1,30 @@
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.modal-show-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+
+    &.modal-show {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
 .portfolio-gallery-item {
     ul {
         display: flex;

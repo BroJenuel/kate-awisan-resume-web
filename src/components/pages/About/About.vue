@@ -1,5 +1,5 @@
 <template>
-    <section id="About-Page" class="about-page-section min-h-[100vh] pt-50px flex flex-col">
+    <section id="About-Page" class="about-page-section min-h-[100vh] pt-50px flex flex-col justify-center">
         <ContentTitle title="ABOUT" />
         <div class="flex justify-center items-center">
             <div class="max-w-1200px px-20px md:px-80px text-center">

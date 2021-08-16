@@ -1,4 +1,12 @@
 <template>
+    <transition name="fade">
+        <div v-show="reactiveData.modalShow" class="modal-show-image flex justify-center items-center" :class="{ 'modal-show': reactiveData.modalShow }">
+            <div @click="closeModal()" class="fixed top-[10px] right-[10px] cursor-pointer">
+                <icon :color="`#fff`" :name="`x`" :size="50" />
+            </div>
+            <img :src="reactiveData.selectedImage" class="max-w-700px w-[100vw]" alt="" />
+        </div>
+    </transition>
     <div id="portfolio-page-content" class="min-h-100vh pt-40px">
         <content-title title="PORTFOLIO" />
         <div class="flex justify-center">
@@ -14,8 +22,8 @@
         <div class="portfolio-gallery-item gallery flex justify-center">
             <ul>
                 <template v-for="(image, i) in images" :key="i">
-                    <li v-show="selectedCategory.selected === 'all' || selectedCategory.selected === image.type">
-                        <img :src="require(`@/assets/images/portfolio/${image.image}`)" alt="A Toyota Previa covered in graffiti" loading="lazy" />
+                    <li @click="selectImage(image)" v-show="reactiveData.selected === 'all' || reactiveData.selected === image.type">
+                        <img :src="image.imageThumbnail" alt="A Toyota Previa covered in graffiti" loading="lazy" />
                         <div class="portfolio-info">
                             <div class="portfolio-links">
                                 <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="50" height="50">
@@ -37,12 +45,15 @@
 <script>
 import { reactive } from '@vue/reactivity';
 import ContentTitle from '../../ContentTitle/ContentTitle.vue';
+import Icon from '../../Icon/Icon.vue';
 export default {
     name: 'Portfolio',
-    components: { ContentTitle },
+    components: { ContentTitle, Icon },
     setup: () => {
-        const selectedCategory = reactive({
+        const reactiveData = reactive({
             selected: 'all',
+            selectedImage: '',
+            modalShow: false,
         });
         const categories = [
             {
@@ -70,69 +81,91 @@ export default {
         const images = [
             {
                 type: 'ads',
-                image: 'ads1.png',
+                imageThumbnail: 'https://i.imgur.com/t3TOJ3Xl.png',
+                image: 'https://i.imgur.com/t3TOJ3X.png',
             },
             {
                 type: 'ads',
-                image: 'ads2.png',
+                imageThumbnail: 'https://i.imgur.com/ID24p25l.png',
+                image: 'https://i.imgur.com/ID24p25.png',
             },
             {
                 type: 'ads',
-                image: 'ads3.png',
+                imageThumbnail: 'https://i.imgur.com/lrdm1gVl.jpg',
+                image: 'https://i.imgur.com/lrdm1gV.jpg',
             },
             {
                 type: 'art',
-                image: 'art1.png',
+                imageThumbnail: 'https://i.imgur.com/meqLfz8l.png',
+                image: 'https://i.imgur.com/meqLfz8.png',
             },
             {
                 type: 'art',
-                image: 'art2.png',
+                imageThumbnail: 'https://i.imgur.com/3eetTIIl.png',
+                image: 'https://i.imgur.com/3eetTII.png',
             },
             {
                 type: 'art',
-                image: 'art3.jpg',
+                imageThumbnail: 'https://i.imgur.com/r6SRAiGl.jpg',
+                image: 'https://i.imgur.com/r6SRAiG.jpg',
             },
             {
                 type: 'logo',
-                image: 'logo.png',
+                imageThumbnail: 'https://i.imgur.com/p8zeuE6l.png',
+                image: 'https://i.imgur.com/p8zeuE6.png',
             },
             {
                 type: 'logo',
-                image: 'logo2.png',
+                imageThumbnail: 'https://i.imgur.com/06WyyPzl.png',
+                image: 'https://i.imgur.com/06WyyPz.png',
             },
             {
                 type: 'logo',
-                image: 'logo3.png',
+                image: 'https://i.imgur.com/czirpTW.png',
+                imageThumbnail: 'https://i.imgur.com/czirpTWl.png',
             },
             {
                 type: 'others',
-                image: 'others1.png',
+                image: 'https://i.imgur.com/CgHYvNt.pngg',
+                imageThumbnail: 'https://i.imgur.com/CgHYvNtl.png',
             },
             {
                 type: 'others',
-                image: 'others2.png',
+                image: 'https://i.imgur.com/ioMPvAN.png',
+                imageThumbnail: 'https://i.imgur.com/ioMPvANl.png',
             },
             {
                 type: 'others',
-                image: 'others3.png',
+                image: 'https://i.imgur.com/ZXh0CKx.png',
+                imageThumbnail: 'https://i.imgur.com/ZXh0CKxl.png',
             },
             {
                 type: 'others',
-                image: 'others4.png',
+                image: 'https://i.imgur.com/iATplDQ.png',
+                imageThumbnail: 'https://i.imgur.com/iATplDQl.png',
             },
             {
                 type: 'others',
-                image: 'others5.png',
+                image: 'https://i.imgur.com/6xIAYMn.jpg',
+                imageThumbnail: 'https://i.imgur.com/6xIAYMnl.jpg',
             },
         ];
 
         return {
             categories,
             images,
-            selectedCategory,
+            reactiveData,
             selectCategory: (categorySelected) => {
-                selectedCategory.selected = categorySelected;
-                console.log(selectedCategory.selected);
+                reactiveData.selected = categorySelected;
+                console.log(reactiveData.selected);
+            },
+            selectImage: (image) => {
+                (reactiveData.selectedImage = image.image), (reactiveData.modalShow = true);
+                document.body.style.overflow = 'hidden';
+            },
+            closeModal: () => {
+                reactiveData.modalShow = false;
+                document.body.style.overflow = 'auto';
             },
         };
     },
