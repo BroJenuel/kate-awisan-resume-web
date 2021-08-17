@@ -14,16 +14,12 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.23c803d47fc940818abd1c36c731b226.js"
+  "/precache-manifest.6596d3994cd6dff7f3792b7ed4a7e45d.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "kate-awisan-resume-web"});
 
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-});
+workbox.core.skipWaiting();
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to

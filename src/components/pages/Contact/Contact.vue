@@ -14,9 +14,19 @@
                 </div>
             </div>
             <div class="input-form flex flex-col md:max-w-500px max-w-100% w-[100%] gap-10px">
+                <div v-show="error.alertShow" :class="{'bg-red-500': error.alertType === 'danger', 'bg-green-600': error.alertType === 'success'}" class="flex items-center bg-red-500 py-20px px-10px rounded-md text-light-50 gap-10px">
+                    <div>
+                        <Icon v-if="error.alertType === 'danger'" name="danger" color="#fff" />
+                         <Icon v-else name="check" color="#fff" />
+                    </div>
+                    <div>
+                        {{error.alertMessage}}
+                    </div>
+                </div>
                 <div class="flex gap-10px w-[100%]">
                     <div class="w-[100%]">
                         <input
+                            v-model="form.name"
                             type="text"
                             class="mt-1 w-100% focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md py-[0.5rem] px-[.75rem] border-width-1px"
                             placeholder="Your Name"
@@ -24,6 +34,7 @@
                     </div>
                     <div class="w-[100%]">
                         <input
+                            v-model="form.email"
                             type="text"
                             class="mt-1 w-100% focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md py-[0.5rem] px-[.75rem] border-width-1px"
                             placeholder="Email Address"
@@ -33,6 +44,7 @@
                 <div class="flex flex-col gap-10px">
                     <div>
                         <input
+                            v-model="form.subject"
                             type="text"
                             class="mt-1 w-100% focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md py-[0.5rem] px-[.75rem] border-width-1px"
                             placeholder="Subject"
@@ -40,9 +52,10 @@
                     </div>
                     <div>
                         <textarea
+                            v-model="form.message"
                             type="text"
                             class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md py-[0.5rem] px-[.75rem] border-width-1px"
-                            placeholder="Email Address"
+                            placeholder="Type Your Message Here"
                             rows="7"
                         />
                     </div>
@@ -66,8 +79,10 @@
                             focus:outline-none
                             focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
                         "
+                        :disabled="error.buttonLoad ? 'disabled' : false"
+                        @click="submit()"
                     >
-                        Send
+                        {{ error.buttonLoad === true ? 'Loading' : 'Send' }}
                     </button>
                 </div>
             </div>
