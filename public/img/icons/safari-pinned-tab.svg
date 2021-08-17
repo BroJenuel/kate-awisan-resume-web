@@ -1,3 +1,47 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.00251 14.9297L0 1.07422H6.14651L8.00251 4.27503L9.84583 1.07422H16L8.00251 14.9297Z" fill="black"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   fill="none"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="safari-pinned-tab.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="18.605747"
+     inkscape:cx="7.4439365"
+     inkscape:cy="-0.88682276"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.6504px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.874239"
+     x="0.21264873"
+     y="14.80708"
+     id="text2381"
+     transform="scale(0.99099571,1.0090861)"><tspan
+       sodipodi:role="line"
+       id="tspan2379"
+       x="0.21264873"
+       y="14.80708"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.6504px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.874239">K</tspan></text>
 </svg>
