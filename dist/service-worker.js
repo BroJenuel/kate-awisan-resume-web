@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.6596d3994cd6dff7f3792b7ed4a7e45d.js"
+  "/precache-manifest.f7c03bffff9697710587e23696c132ca.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "kate-awisan-resume-web"});
