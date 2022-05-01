@@ -1,5 +1,5 @@
 import { reactive } from 'vue';
-import { links } from '../../../Details/details';
+import { links, address, email } from '../../../Details/details';
 import ContentTitle from '../../ContentTitle/ContentTitle.vue';
 import Icon from './../../Icon/Icon.vue';
 import emailjs, { init } from 'emailjs-com';
@@ -83,18 +83,13 @@ export default {
                 {
                     icon: 'location',
                     title: 'Location',
-                    detail: 'Benguet, Philippines 2601'
+                    detail: address
                 },
                 {
                     icon: 'envelope',
                     title: 'Email',
-                    detail: 'kateawisan@gmail.com'
+                    detail: email
                 },
-                // {
-                //     icon: 'mobile',
-                //     title: 'Call',
-                //     detail: '+639496284352'
-                // }
             ],
             links: links,
             submit

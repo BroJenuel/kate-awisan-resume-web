@@ -14,13 +14,17 @@
                 </div>
             </div>
             <div class="input-form flex flex-col md:max-w-500px max-w-100% w-[100%] gap-10px">
-                <div v-show="error.alertShow" :class="{'bg-red-500': error.alertType === 'danger', 'bg-green-600': error.alertType === 'success'}" class="flex items-center bg-red-500 py-20px px-10px rounded-md text-light-50 gap-10px">
+                <div
+                    v-show="error.alertShow"
+                    :class="{ 'bg-red-500': error.alertType === 'danger', 'bg-green-600': error.alertType === 'success' }"
+                    class="flex items-center bg-red-500 py-20px px-10px rounded-md text-light-50 gap-10px"
+                >
                     <div>
                         <Icon v-if="error.alertType === 'danger'" name="danger" color="#fff" />
-                         <Icon v-else name="check" color="#fff" />
+                        <Icon v-else name="check" color="#fff" />
                     </div>
                     <div>
-                        {{error.alertMessage}}
+                        {{ error.alertMessage }}
                     </div>
                 </div>
                 <div class="flex gap-10px w-[100%]">
@@ -63,22 +67,7 @@
                 <div>
                     <button
                         type="submit"
-                        class="
-                            inline-flex
-                            justify-center
-                            py-2
-                            px-4
-                            border border-transparent
-                            shadow-sm
-                            text-sm
-                            font-medium
-                            rounded-md
-                            text-white
-                            bg-indigo-600
-                            hover:bg-indigo-700
-                            focus:outline-none
-                            focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
-                        "
+                        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         :disabled="error.buttonLoad ? 'disabled' : false"
                         @click="submit()"
                     >
