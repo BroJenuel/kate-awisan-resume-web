@@ -15,7 +15,7 @@
                     <div class="flex flex-wrap gap-10px <md:justify-center">
                         <ul class="flex flex-col gap-10px w-290px">
                             <li>
-                                <div class="flex items-center">
+                                <div v-if="phone" class="flex items-center">
                                     <Icon name="arrowRight" color="var(--primary-color)" />
                                     <span class="whitespace-nowrap"><b>Phone:</b> {{ phone }}</span>
                                 </div>
@@ -64,8 +64,9 @@ export default {
     setup() {
         return {
             details: about,
-            phone: '+639496284352',
-            city: 'La Trinidad, Benguet, Philippines',
+            // phone: '+639496284352',
+            phone: false,
+            city: 'Benguet, Philippines 2601',
             degree: 'Bachelor’s',
             email: 'kateawisan@gmail.com',
         };

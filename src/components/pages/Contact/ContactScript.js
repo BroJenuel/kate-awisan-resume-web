@@ -83,18 +83,18 @@ export default {
                 {
                     icon: 'location',
                     title: 'Location',
-                    detail: 'Pico Km4, La Trinidad, Benguet, Philippines'
+                    detail: 'Benguet, Philippines 2601'
                 },
                 {
                     icon: 'envelope',
                     title: 'Email',
                     detail: 'kateawisan@gmail.com'
                 },
-                {
-                    icon: 'mobile',
-                    title: 'Call',
-                    detail: '+639496284352'
-                }
+                // {
+                //     icon: 'mobile',
+                //     title: 'Call',
+                //     detail: '+639496284352'
+                // }
             ],
             links: links,
             submit
