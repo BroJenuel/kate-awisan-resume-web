@@ -61,6 +61,10 @@ export default {
                 key: 'all',
             },
             {
+                name: 'RECENT WORKS',
+                key: 'recent_works',
+            },
+            {
                 name: 'ARTS & ILLUSTRATION',
                 key: 'art',
             },
@@ -149,6 +153,46 @@ export default {
                 image: 'https://i.imgur.com/6xIAYMn.jpg',
                 imageThumbnail: 'https://i.imgur.com/6xIAYMnl.jpg',
             },
+            {
+                type: 'recent_works',
+                image: 'https://i.imgur.com/CEcQA08.png',
+                imageThumbnail: 'https://i.imgur.com/CEcQA08m.png',
+            },
+            {
+                type: 'recent_works',
+                image: 'https://i.imgur.com/Xm7rbkV.png',
+                imageThumbnail: 'https://i.imgur.com/Xm7rbkVm.png',
+            },
+            {
+                type: 'recent_works',
+                image: 'https://i.imgur.com/orGFZw3.png',
+                imageThumbnail: 'https://i.imgur.com/orGFZw3m.png',
+            },
+            {
+                type: 'recent_works',
+                image: 'https://i.imgur.com/x9QX7sG.png',
+                imageThumbnail: 'https://i.imgur.com/x9QX7sGm.png',
+            },
+            {
+                type: 'recent_works',
+                image: 'https://i.imgur.com/Ntxfc19.png',
+                imageThumbnail: 'https://i.imgur.com/Ntxfc19m.png',
+            },
+            {
+                type: 'recent_works',
+                image: 'https://i.imgur.com/ZNrhWFW.png',
+                imageThumbnail: 'https://i.imgur.com/ZNrhWFWm.png',
+            },
+            {
+                type: 'recent_works',
+                image: 'https://i.imgur.com/65sJb1J.png',
+                imageThumbnail: 'https://i.imgur.com/65sJb1Jm.png',
+            },
+            {
+                type: 'recent_works',
+                image: 'https://i.imgur.com/mthbAMp.png',
+                imageThumbnail: 'https://i.imgur.com/mthbAMpm.png',
+            },
         ];
 
         return {
@@ -171,5 +215,4 @@ export default {
     },
 };
 </script>
-<style lang="scss" src="./style.scss">
-</style>
+<style lang="scss" src="./style.scss"></style>

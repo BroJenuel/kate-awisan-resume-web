@@ -1,7 +1,8 @@
-export const about = "Hi there! I’m Kate, Experienced in Customer Service Representative, Social Media Assistant, Data Entry and Graphic Designing as a freelancer. I've mostly helped in handling chats, phone calls, emails, assisting customers or clients of the company with their inquiries or complaints, and data entries such as tracking records, managing google sheets/drive, and entering sets of data. Besides that, I also manage social media accounts by interacting with the audiences through comments, email marketing design, and editing/ posting several ads or content.";
+export const about =
+    "Hi there! I’m Kate, Experienced in Customer Service Representative, Social Media Assistant, Data Entry and Graphic Designing as a freelancer. I've mostly helped in handling chats, phone calls, emails, assisting customers or clients of the company with their inquiries or complaints, and data entries such as tracking records, managing google sheets/drive, and entering sets of data. Besides that, I also manage social media accounts by interacting with the audiences through comments, email marketing design, and editing/ posting several ads or content.";
 
-export const aboutExtend = "I have completed my Bachelors degree in Information and Technology at King’s College of the Philippines. I’m from the mountainous region of Cordillera, Luzon-part of the Philippines called the province of Benguet.";
-
+export const aboutExtend =
+    'I have completed my Bachelors degree in Information and Technology at King’s College of the Philippines. I’m from the mountainous region of Cordillera, Luzon-part of the Philippines called the province of Benguet.';
 
 export const firstName = 'Kate';
 export const lastName = 'Ganawed';
@@ -9,7 +10,6 @@ export const email = 'kateawisan@gmail.com';
 export const phone = '+639496284352';
 export const address = 'Benguet, Philippines 2601';
 export const degree = 'Bachelor of Science in IT';
-
 
 export const links = [
     {
@@ -37,12 +37,14 @@ export const links = [
 export const experiences = [
     [
         {
-            company: `ZEENKIND and ELZAMA`,
+            company: `CAPEX INDUSTRIAL (ASIA) LIMITED`,
             year: `2021 - <b>PRESENT</b>`,
-            jobTitle: `Marketing Assistant`,
+            jobTitle: `Ecommerce Marketing Assistant`,
             summaries: [
                 `Assisting in organizing campaigns and developing marketing strategies of the Company. Responsible for researching, compiling and reporting on buying trends and statistics, graphics designing, copywriting for marketing materials and other support.`,
+                `Responsible for up-selling and cross selling opportunities on product pages to maximize sales, ensuring they are continuously updated with in stock, relevant styles. Working closely with the Buying & Merchandising teams to ensure products arrive on time for marketing launches. Mostly responsible for Image Listings, Video Content and A+ Content on Amazon.`,
             ],
+            links: ['https://www.zeenkind.com', 'https://www.elzama.com'],
         },
         {
             company: `LENNY LEMONS (INTERNATIONAL)`,
@@ -53,6 +55,8 @@ export const experiences = [
                 `My role also includes data entry, research, reacting, commenting, posting, and assisting inquiries or complaints.`,
             ],
         },
+    ],
+    [
         {
             company: `FREELANCE`,
             year: `2021`,
@@ -63,8 +67,6 @@ export const experiences = [
                 `My role also includes Data scraping, Data Collection, and Web Research.`,
             ],
         },
-    ],
-    [
         {
             company: `ILEARN SKILLS AND DEVELOPMENT CENTER`,
             year: `2018 - 2019`,
@@ -81,4 +83,4 @@ export const experiences = [
             ],
         },
     ],
-]
+];

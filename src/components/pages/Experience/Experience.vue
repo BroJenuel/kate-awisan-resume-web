@@ -10,7 +10,7 @@ import { experiences } from './../../../Details/details';
             <div class="flex max-w-1200px gap-50px px-80px <md:px-40px <md:flex-col <md:gap-0">
                 <div v-for="(experience, i) in experiences" :key="i">
                     <template v-for="xp in experience" :key="xp.company">
-                        <ResumeItem :company="xp.company" :year="xp.year" :jobTitle="xp.jobTitle" :summary="xp.summaries" />
+                        <ResumeItem :company="xp.company" :year="xp.year" :jobTitle="xp.jobTitle" :summary="xp.summaries" :experience="xp" />
                     </template>
                 </div>
             </div>
